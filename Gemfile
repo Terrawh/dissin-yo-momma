@@ -1,0 +1,5 @@
+source "https://rubygems.org"
+gem "sinatra"
+gem "haml"
+gem "kramdown"
+gem "puma"
