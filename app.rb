@@ -1,4 +1,5 @@
 require "sinatra"
+require "sinatra/reloader"
 require "haml"
 require "kramdown"
 
@@ -66,18 +67,3 @@ get "/" do
   @all_text = sort_text(TEXT)
   haml :index
 end
-
-__END__
-
-@@ layout
-%html
-  %head
-    %title Dissertation
-    %link(rel="stylesheet" href="/css/style.css")
-  %body
-    .content 
-      = yield
-
-@@ index
-- @all_text.each do |paragraph|
-    = Kramdown::Document.new(paragraph).to_html
