@@ -2,6 +2,7 @@ require "sinatra"
 require "haml"
 require "kramdown"
 
+
 file_contents = ""
 f = File.open("disso.md", "r") 
 f.each_line do |line|
@@ -72,8 +73,10 @@ __END__
 %html
   %head
     %title Dissertation
+    %link(rel="stylesheet" href="/css/style.css")
   %body
-    = yield
+    .content 
+      = yield
 
 @@ index
 - @all_text.each do |paragraph|
