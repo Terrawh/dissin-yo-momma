@@ -1,2 +1,10 @@
-- @all_text.each do |paragraph|
-  = Kramdown::Document.new(paragraph).to_html
+%html
+  %head
+    %title Dissertation
+    %link{ :href => "css/style.css", :rel => "stylesheet", :type => "text/css" }
+  %body
+    .essay
+      - @all_text.each do |paragraph|
+        = Kramdown::Document.new(paragraph).to_html
+    .iframe
+      %iframe{ :src => "http://something.com" }
