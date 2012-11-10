@@ -1,11 +1,12 @@
 body {
-	background-color: pink;
+	margin: 15px;
 }
 
 h1 {
-	color: red;
+	
 }
 
 a {
-	color: :green;
+	color: black;
+	text-decoration: none;
 }
