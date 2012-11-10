@@ -23,3 +23,8 @@ a {
 	bottom: 0;
 	left: 440;
 }
+
+.iframe iframe {
+	border: 0;
+	border-left: 1px solid #EEE;
+}
