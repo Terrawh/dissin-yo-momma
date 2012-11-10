@@ -3,5 +3,8 @@
     %title Dissertation
     %link{ :href => "css/style.css", :rel => "stylesheet", :type => "text/css" }
   %body
-    .content 
-      = yield
+    .essay
+      - @all_text.each do |paragraph|
+        = Kramdown::Document.new(paragraph).to_html
+    .iframe
+      %iframe{ :src => "http://something.com" }
