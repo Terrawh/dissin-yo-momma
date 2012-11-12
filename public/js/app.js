@@ -8,12 +8,16 @@ $( document ).ready( function() {
     // save to two variables.
     var el = $( event.target ),
         link = el.attr("href");
-    
     // Also create a shorthand for our iframe.
     var iframe = $( ".iframe iframe");
     
     // Swap original src with link variable.
     iframe.attr("src", link);
+
+    // Removes active classes.
+    // Adds active class to link clicked.
+    $("a.active").removeClass("active");
+    el.addClass("active");
     
     // Prevent default link behaviour
     event.preventDefault();

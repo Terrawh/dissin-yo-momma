@@ -51,7 +51,7 @@ def split_lines(paragraph)
       if sentence.include?("#")
         sentence = ["# [#{sentence.join(" ").gsub!("#", "")}](http://duckduckgo.com/?q=#{phrase}+!)"]
       else
-        sentence = ["[#{sentence.join(" ")}](http://duckduckgo.com/?q=#{phrase}+!)"]
+        sentence = ["[#{sentence.join(" ")}](http://duckduckgo.com/?q=#{phrase} +!)"]
       end
       
       sentences << sentence
